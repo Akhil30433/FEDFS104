@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javasccript Function Types Demo</h2>
+    <button on Click="runDeclaration()">Function Declaration</button>
+    <button on Click="runExpression()">Function Expression</button>
+    <button on Click="runArrow()">Arrow Function</button>
+    <button on Click="runIIFE()">Immediately Invoked Function Expression</button>
+    <button on Click="runConstructor()">Function Constructor</button>
+
+    <button onclick="runG">Generator Function</button>
+    <button onclick="runAsyncFuntion()">Async Function</button>
+
+    <div id="output">Output will appear here ...</div>
+
+    <script>
+        const outputDiv = document.getElementById("output");
+        function show(msg) {
+            outputDiv.innerText +=msg + "\n";
+        }
+        function clearOutput(){
+            outputDiv.innerText = '';
+        }
+        //1.Function Declaration
+        function calculateTotal(price,tax){
+            return price + (price * tax);
+        }
+        function runDeclaration(){
+            clearOutput();
+            const total=calculateTotal(100,0.5);
+            
+        }
+        //2.Function Expression
+        const greetUser = function(name) {
+            return `Welcome, ${name}!`;
+        };
+        function runExpression(){
+            clearOutput();
+            show(greetUser("Drogon"));
+        }
+        //3.Arrow Function
+        const tasks = ["work","Sleep","Exercise","Study"];
+        const shortTasks=tasks.filter(task => task.length <=5);
+        function runArrow(){
+            clearOutput();
+            setTimeout(function(){
+                show("Remainder: Take a break!");
+            }, 1000);
+        }
+        //4.Immediately Invoked Function Expression
+        function runIIFE(){
+            clearOutput();
+            (function(){
+                const scretToken = "abc123";
+                show("IIFE executed securely, token hidden!");
+            })();
+
+        }
+        //5.Constructor Function
+        function User(name,role){
+            this.name = name;
+        }
+
+        //6.Function Constructor
+        function User(name,role){
+            this.name = name;
+            this.role = role;
+        }
+        function runConstructor(){
+            clearOutput();
+            const user1 = new User("Drogon","Admin");
+            show(user1.name + "-" + user1.role);
+        }
+        // 8.Async Function
+        async function fetchWeather(){
+            return "Weather: Sunny 28"
+        }
+        function
+        
+    
+    </script>
+
+    
+
+</body>
+</html>
