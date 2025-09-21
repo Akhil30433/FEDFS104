@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Resposive Flexbox Cards</h2>
+    <div class="container">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>This is the first card.</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>This is the second card.</p>
+            <button>Learn more</button>
+        </div>
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>This is the third card.</p>
+            <button>Learn more</button>
+        </div>
+    </div>
+</body>
+</html>
